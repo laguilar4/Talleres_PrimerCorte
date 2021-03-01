@@ -31,10 +31,51 @@ else:
 
 # Punto3
 mont = float(input('Digite el monto por el que se efectua la fianza'))
+cuota = float(input('Digite la cantidad de cuotas'))
+if mont < 50000:
+    porc = mont * 0.03
+    tot = mont + porc 
+    res = tot / cuota
+    print(f'Cada cuota sera de: ${res}')
+    print(f'El monto total es: ${tot}')
+else:
+    porc = mont * 0.02
+    tot = mont + porc 
+    res = tot / cuota
+    print(f'Cada cuota sera de: ${res}')
+    print(f'El monto total es: ${tot}')
+
+# Punto4
+acumpu = 0
+acumga = 0
+for i in range(5):
+    ganancias = float(input(f'Digite las ganancias del dia: {i} '))
+    puntos = float(input(f'Digite los puntos del dia: {i} '))
+    acumpu = acumpu + puntos
+    acumga = acumga + ganancias
+promedio = acumpu / 5
+print(f'El promedio de puntos es: {promedio}')
+if promedio > 170:
+    multa = acumga / 2
+    print(f'Debe pagar una multa de: {multa}')
+else: 
+    print('No debe pagar multa')
+
+
 # Punto5
 precio = float(input('Digite el precio del automovil o terreno'))
-auto = precio
-terreno = precio
+vidautila = float(input('Digite la vida util del automovil'))
+incre = float(input('Digite el incremento anual en porcentaje del terreno(Escribirlo en decimal) '))
+depreca = (precio / vidautila) * 3
+deprect = (precio * incre) * 3
+print(f'La depreciacion del auto es: {depreca}')
+print(f'La depreciacion del terreno es: {deprect}')
+mitad = deprect / 2
+if depreca < mitad:
+    print('Se comprara el automovil')
+else:
+    print('Se comprara el terreno')
+
 # Punto6
 cantcom =  float(input('digite la cantidad de computadores a comprar '))
 totapagar = cantcom * 11000
@@ -81,9 +122,22 @@ else:
         res = prec + iva
         print(f'El precio sin descuento de marca y con iva es: {res}')
 
+# Punto8
+montotal = float(input('Digite el monto total de la compra '))
+if montotal > 500000:
+    propio = montotal * 0.55
+    banco = montotal * 0.30
+    credito = montotal * 0.15
+    fabr = credito * 0.20
+    print(f'La empresa pagara de su dinero {propio}, pedira prestado del banco {banco}, se pagara con credito {credito} y el interes por credito es{fabr}')
+else:
+    propio = montotal * 0.70
+    credito = montotal * 0.30
+    fabr = credito * 0.20
+    print(f'La empresa pagara de su dinero {propio}, se pagara con credito{credito} y el interes por credito es {fabr}')
 # Punto9
-n1 = float(input('digite el numero 1 '))
-n2 = float(input('digite el numero 2 '))
+n1 = float(input('Digite el numero 1 '))
+n2 = float(input('Digite el numero 2 '))
 if n1 == n2:
     mult = n1 * n2
     print(f'Son iguales y al multiplicarlos el resultado es: {mult}')
@@ -92,12 +146,12 @@ else:
         res = n1 - n2
         print(f'El numero 1 es mayor que el numero 2 y al restarlos el resultado es: {res}')
     else:
-        sum = n1 + n2
-        print(f'El numero 2 es mayor que el numero 1 y al sumarlos el resultado es: {sum}')
+        suma = n1 + n2
+        print(f'El numero 2 es mayor que el numero 1 y al sumarlos el resultado es: {suma}')
 # Punto10
-n1 = float(input('digite el primer numero '))
-n2 = float(input('digite el segundo numero '))
-n3 = float(input('digite el tercer numero '))
+n1 = float(input('Digite el primer numero '))
+n2 = float(input('Digite el segundo numero '))
+n3 = float(input('Digite el tercer numero '))
 if n1 > n2:
     if n1 > n3:
         print(f'El mayor es el numero: {n1}')
