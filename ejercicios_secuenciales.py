@@ -1,3 +1,43 @@
+# Punto1
+p1 = float(input('Digite la cantidad de dinero que invirtio la persona 1'))
+p2 = float(input('Digite la cantidad de dinero que invirtio la persona 2'))
+p3 = float(input('Digite la cantidad de dinero que invirtio la persona 3'))
+total = p1 + p2 + p3
+porc1 = (p1 / total) * 100
+porc2 = (p2 / total) * 100
+porc3 = (p3 / total) * 100
+print(f'El total fue de {total}')
+print(f'El porcentaje de la persona 1 es de {porc1}%, de la persona 2 es de {porc2}% y de la persona 3 es de {porc3}%')
+# Punto2
+salar = float(input('Digite el salario del empleado'))
+hijos = float(input('Digite la cantidad de hijos'))
+bonif = hijos * 80000
+total = salar + bonif 
+print(f'El total a pagar es de ${total}')
+# Punto3
+saldin = float(input('Digite el saldo'))
+interes = saldin * 0.015
+saldfin = saldin + interes
+print(f'El saldo final es de ${saldfin}')
+# Punto4
+metros = float(input('Digite los metros cuadrados del terreno'))
+tot = metros * 80000
+cuotain = tot * 0.35
+cuotares = tot * 0.65
+cuotadiv = cuotares / 12
+print(f'El total a pagar es de ${tot}, con una cuota inicial de ${cuotain} y 12 cuotas de ${cuotadiv}')
+# Punto5
+sueldo = float(input('Digite el sueldo'))
+ley = sueldo * 0.01
+seguroso = sueldo * 0.04
+segurofor = sueldo * 0.005
+caja = sueldo * 0.05
+tot = sueldo - (ley + seguroso + segurofor + caja)
+print(f'El descuento de ley es de {ley}')
+print(f'El descuento de seguro social es {seguroso}')
+print(f'El descuento de seguro forzoso es {segurofor}')
+print(f'El descuento de caja es {caja}')
+print(f'El total es {tot}')
 # Punto6
 color = float(input('Digite la cantidad de colores '))
 palabras = float(input('Digite la cantidad de palabras '))
